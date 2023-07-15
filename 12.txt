@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+void main()
+{
+    float kan, eng, hindi, maths, science, sst, avmar;
+
+    printf("Letter Grading\n");
+    printf("SSLC Marks Grading\n");
+
+    printf("Enter the marks for Kannada: ");
+    scanf("%f", &kan);
+
+    printf("Enter the marks for English: ");
+    scanf("%f", &eng);
+
+    printf("Enter the marks for Hindi: ");
+    scanf("%f", &hindi);
+
+    printf("Enter the marks for Maths: ");
+    scanf("%f", &maths);
+
+    printf("Enter the marks for Science: ");
+    scanf("%f", &science);
+
+    printf("Enter the marks for SST: ");
+    scanf("%f", &sst);
+
+    if (kan <= 100 && kan >= 0)
+    {
+        avmar = (kan + eng + hindi + maths + science + sst) / 6;
+        printf("The average marks are = %f\n", avmar);
+
+        if (avmar < 35 && avmar > 0)
+        {
+            printf("Fail\n");
+        }
+        else if (avmar <= 45 && avmar > 40)
+        {
+            printf("Grade C\n");
+        }
+        else if (avmar <= 50 && avmar > 45)
+        {
+            printf("Grade C+\n");
+        }
+        else if (avmar <= 60 && avmar > 50)
+        {
+            printf("Grade B\n");
+        }
+        else if (avmar <= 70 && avmar > 60)
+        {
+            printf("Grade B+\n");
+        }
+        else if (avmar <= 80 && avmar > 70)
+        {
+            printf("Grade A\n");
+        }
+        else if (avmar <= 100 && avmar > 80)
+        {
+            printf("Grade A+\n");
+        }
+    }
+    else
+    {
+        printf("Invalid marks for Kannada. Marks should be between 0 and 100.\n");
+    }
+}
